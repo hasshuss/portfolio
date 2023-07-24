@@ -5,15 +5,12 @@
 export default function Presentation() {
   return (
     
-      <section className='PresentationContainer'>
-        <article className='PresentationText'>
-          <span>Hi !<br></br>My name is</span>
+      <div>
+          <span>Bonjour !<br></br>Je m'appelle</span>
           <h1>Hassan Cheikh Hussein</h1>
-          <span>I am</span><h2>Web Developper</h2>
-          <span>It means i build things on internet</span>
-        </article>
-      </section>
-
+          <span>Je suis</span><h2>Web Developpeur</h2>
+          <span>(ça veut dire que je construit des trucs sur internet)</span>
+      </div>
   )
 }
 

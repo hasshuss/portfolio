@@ -6,7 +6,7 @@ nav{
     height:100%
 }
 
-.NavElement{
+.NavElementContainer{
     display:flex;
     border-style: solid;
     color:blue;
@@ -27,10 +27,18 @@ nav{
     background-color: aqua;
   }
 
+  .NavElement{
+margin:auto;
+  }
+
   #nav{
     height: 100%;
   justify-content: space-between;
   display: flex;
   flex-direction: column;
   background-color: azure;
+  }
+
+  .active{
+    color:green
   }

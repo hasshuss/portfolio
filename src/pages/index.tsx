@@ -11,10 +11,14 @@ export default function Index() {
         <title>Portfolio Web Developper</title>
         <meta name="description" content="Web Developpeur" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="../../public/favicon.ico" />
       </Head>
       <Nav />
+      <section className='PresentationContainer'>
+        <article className='PresentationText'>
       <Presentation />
+      </article>
+      </section>
     </main>
   )
 }
