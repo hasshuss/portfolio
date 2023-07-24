@@ -1,0 +1,36 @@
+@import '../../styles/mixins.scss';
+
+nav{
+    display:flex;
+    flex-direction: column;
+    height:100%
+}
+
+.NavElement{
+    display:flex;
+    border-style: solid;
+    color:blue;
+    border-width: 2px; /* Épaisseur de la bordure */
+    font-size: 20px;
+    border-color: blue;
+    text-align: center;
+    flex-grow:1;
+    height:100%;
+    
+}
+
+.NavContainer{
+    height:300px;
+    justify-content: space-between;
+    display:flex;
+    flex-direction: column;
+    background-color: aqua;
+  }
+
+  #nav{
+    height: 100%;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  background-color: azure;
+  }
