@@ -5,6 +5,8 @@ import '../styles/mixins.scss';
 import '../styles/resetcss.scss';
 import '../Components/nav/nav.scss';
 import './index.scss';
+import '../Components/Skills/Skills.scss';
+import '../Components/Collapse/Collapse.scss';
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();

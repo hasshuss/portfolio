@@ -9,8 +9,8 @@ nav{
 .NavElementContainer{
     display:flex;
     border-style: solid;
-    color:blue;
-    border-width: 2px; /* Épaisseur de la bordure */
+    color:black;
+    border-width: 1px; /* Épaisseur de la bordure */
     font-size: 20px;
     border-color: blue;
     text-align: center;
@@ -24,7 +24,7 @@ nav{
     justify-content: space-between;
     display:flex;
     flex-direction: column;
-    background-color: aqua;
+    background-color: lightgray;
   }
 
   .NavElement{
@@ -41,5 +41,6 @@ margin:auto;
 
   .active{
     border-right: 0;
+    color:blue;
     @include shadow;
   }

@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import Nav from '../Components/nav/nav'
-import Skills from '../Components/Skills'
+import Skills from '../Components/Skills/Skills'
 
 
 export default function SkillsPage() {
