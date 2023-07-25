@@ -40,5 +40,6 @@ margin:auto;
   }
 
   .active{
-    color:green
+    border-right: 0;
+    @include shadow;
   }

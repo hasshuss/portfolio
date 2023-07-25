@@ -4,7 +4,8 @@ import Nav from '../Components/nav/nav'
 import Presentation from '../Components/Presentation'
 
 
-export default function Index() {
+export default function Index()
+{
   return (
     <main>
       <Head>
