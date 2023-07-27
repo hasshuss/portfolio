@@ -16,7 +16,7 @@ export default function Nav() {
       <ul className="NavContainer">
         <li className={`NavElementContainer ${activeItem === '' ? 'active' : ''}`}>
           <Link className="NavElement" href="/">
-            About
+            Home
           </Link>
         </li>
         <li className={`NavElementContainer ${activeItem === 'services' ? 'active' : ''}`}>
@@ -26,12 +26,12 @@ export default function Nav() {
         </li>
         <li className={`NavElementContainer ${activeItem === 'skillsPage' ? 'active' : ''}`}>
           <Link className="NavElement" href="/skillsPage">
-            Skills
+            Compétences
           </Link>
         </li>
         <li className={`NavElementContainer ${activeItem === 'projects' ? 'active' : ''}`}>
           <Link className="NavElement" href="/projects">
-            Projects
+            Projets
           </Link>
         </li>
         <li className={`NavElementContainer ${activeItem === 'contact' ? 'active' : ''}`}>
@@ -40,6 +40,7 @@ export default function Nav() {
           </Link>
         </li>
       </ul>
+      <div className='EmptyElement'></div>
     </nav>
   );
 }

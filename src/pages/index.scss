@@ -12,11 +12,10 @@ main {
   border-style: solid;
   border-width: 1px;
   width:100%;
-  min-height:300px;
-  justify-content: center;
-  border-color: blue;
+  height:100%;
+  border-color: lightgray;
   display:flex;
-  background-color: lightgray;
+  background-color: white;
   border-left: 0px;
 }
 
@@ -29,12 +28,17 @@ main {
   flex-direction: column;
   margin-top: auto;
   margin-bottom: auto;
+  margin:20px
 }
 
-h1{
+.h1{
   font-size: 40px;
+  margin-bottom: 40px;
+  margin-top: 40px;
 }
 
-h2{
+.h2{
   font-size: 40px;
+  margin-bottom: 40px;
+  margin-top: 40px;
 }

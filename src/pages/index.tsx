@@ -7,7 +7,7 @@ import Presentation from '../Components/Presentation'
 export default function Index()
 {
   return (
-    <main>
+    <main className='name'>
       <Head>
         <title>Portfolio Web Developper</title>
         <meta name="description" content="Web Developpeur" />

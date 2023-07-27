@@ -14,7 +14,11 @@ export default function Projects() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />
+      <section className='PresentationContainer'>
+        <article className='PresentationText'>
       <Presentation />
+      </article>
+      </section>
     </main>
   )
 }

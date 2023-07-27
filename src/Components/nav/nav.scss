@@ -1,46 +1,46 @@
 @import '../../styles/mixins.scss';
 
-nav{
-    display:flex;
-    flex-direction: column;
-    height:100%
+
+
+.NavElementContainer {
+  display: flex;
+  border-style: solid;
+  color: lightgray;
+  border-width: 1px;
+  font-size: 20px;
+  border-color: lightgray;
+  text-align: center;
+  flex-grow: 1;
+  font-weight: 300;
+
 }
 
-.NavElementContainer{
-    display:flex;
-    border-style: solid;
-    color:black;
-    border-width: 1px; /* Épaisseur de la bordure */
-    font-size: 20px;
-    border-color: blue;
-    text-align: center;
-    flex-grow:1;
-    height:100%;
-    
-}
-
-.NavContainer{
-    height:300px;
-    justify-content: space-between;
-    display:flex;
-    flex-direction: column;
-    background-color: lightgray;
-  }
-
-  .NavElement{
-margin:auto;
-  }
-
-  #nav{
-    height: 100%;
+.NavContainer {
   justify-content: space-between;
   display: flex;
   flex-direction: column;
-  background-color: azure;
-  }
+  background-color: white;
+}
 
-  .active{
-    border-right: 0;
-    color:blue;
-    @include shadow;
-  }
+.NavElement {
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.NavElement:hover {
+  color: blue
+}
+
+#nav {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.active {
+  border-right: 0;
+  color: blue;
+  @include shadow;
+}

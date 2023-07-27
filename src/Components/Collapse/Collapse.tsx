@@ -24,8 +24,8 @@ const Collapse: React.FC<CollapseProps> = ({ title, content, isOpen }) => {
           src={Vector}
           className={`arrow ${isCollapsed ? '' : 'rotate'}`}
           alt='Arrow'
-          width={20} // Set the desired width of the image
-          height={20} // Set the desired height of the image
+          width={20} 
+          height={20} 
         />
       </div>
       <div className='content-container'>
