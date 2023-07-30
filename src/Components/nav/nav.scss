@@ -12,7 +12,10 @@
   text-align: center;
   flex-grow: 1;
   font-weight: 300;
-
+  height:100%;
+  width:200px;
+  align-items: center; /* Centre verticalement */
+  justify-content: center; /* Centre horizontalement */
 }
 
 .NavContainer {
@@ -20,12 +23,15 @@
   display: flex;
   flex-direction: column;
   background-color: white;
+  height:100%
 }
 
 .NavElement {
-  margin: auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  width:100%;
+  height:100%;
+  
+  align-items: center; /* Centre verticalement */
+  justify-content: center; /* Centre horizontalement */
 }
 
 .NavElement:hover {

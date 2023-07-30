@@ -15,6 +15,7 @@ export default function Nav() {
     <nav id="nav">
       <ul className="NavContainer">
         <li className={`NavElementContainer ${activeItem === '' ? 'active' : ''}`}>
+        
           <Link className="NavElement" href="/">
             Home
           </Link>
@@ -31,7 +32,7 @@ export default function Nav() {
         </li>
         <li className={`NavElementContainer ${activeItem === 'projects' ? 'active' : ''}`}>
           <Link className="NavElement" href="/projects">
-            Projets
+            Projects
           </Link>
         </li>
         <li className={`NavElementContainer ${activeItem === 'contact' ? 'active' : ''}`}>

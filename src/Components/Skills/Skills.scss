@@ -1,7 +1,41 @@
-.skillsContainer{
+.skillsListContainer{
 display:flex;
 flex-direction: row;
 justify-content: space-between;
 margin-left: 20px;
 margin-right: 20px;
+}
+
+.skillContainer{
+    width:30%;
+    border-radius: 5%;
+    border-width: 1px;
+    border-style: groove;
+}
+
+.h1Skills{
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.h2Skills{
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.SkillNameContainer{
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
+
+.TechName{
+    margin-left: 5px;
+}
+
+.TechContainer{
+    display: flex;
+    flex-direction: column;
 }

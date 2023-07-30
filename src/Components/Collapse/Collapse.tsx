@@ -4,8 +4,8 @@ import Vector from '../../images/Vector.png';
 
 
 interface CollapseProps {
-  title: string;
-  content: string;
+  title: string | JSX.Element;
+  content: string | JSX.Element;
   isOpen: boolean;
 }
 
