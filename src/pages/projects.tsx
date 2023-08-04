@@ -9,7 +9,7 @@ export default function Projects() {
     <main>
       <Head>
         <title>Projets Web developpeur</title>
-        <meta name="description" content="Projets Web developpeur" />
+        <meta name="description" content="Portfolio Web developpeur - Hassan Cheikh-Hussein" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

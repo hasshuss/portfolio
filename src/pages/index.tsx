@@ -9,8 +9,8 @@ export default function Index()
   return (
     <main className='name'>
       <Head>
-        <title>Portfolio Web Developper</title>
-        <meta name="description" content="Web Developpeur" />
+        <title>Web Developpeur - Hassan Cheikh Hussein</title>
+        <meta name="description" content="Web Developpeur - Hassan Cheikh-Hussein - Compétences, Portfolio, Services" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="../../public/favicon.ico" />
       </Head>

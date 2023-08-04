@@ -11,35 +11,37 @@ export default function Nav() {
     setActiveItem(currentPath);
   }, [router.pathname]);
 
+  console.log(activeItem);
+
   return (
     <nav id="nav">
       <ul className="NavContainer">
-        <li className={`NavElementContainer ${activeItem === '' ? 'active' : ''}`}>
+        <Link  href="/" className={`NavElementContainer ${activeItem === '' ? 'active' : ''}` }>
         
-          <Link className="NavElement" href="/">
+          <li className="NavElement" >
             Home
-          </Link>
-        </li>
-        <li className={`NavElementContainer ${activeItem === 'services' ? 'active' : ''}`}>
-          <Link className="NavElement" href="/services">
+          </li>
+        </Link>
+        <Link href="/services" className={`NavElementContainer ${activeItem === 'services' ? 'active' : ''}`}>
+          <li className="NavElement" >
             Services
-          </Link>
-        </li>
-        <li className={`NavElementContainer ${activeItem === 'skillsPage' ? 'active' : ''}`}>
-          <Link className="NavElement" href="/skillsPage">
+          </li>
+        </Link>
+        <Link href="/skillsPage" className={`NavElementContainer ${activeItem === 'skillsPage' ? 'active' : ''}`}>
+          <li className="NavElement" >
             Compétences
-          </Link>
-        </li>
-        <li className={`NavElementContainer ${activeItem === 'projects' ? 'active' : ''}`}>
-          <Link className="NavElement" href="/projects">
-            Projects
-          </Link>
-        </li>
-        <li className={`NavElementContainer ${activeItem === 'contact' ? 'active' : ''}`}>
-          <Link className="NavElement" href="/contact">
+          </li>
+        </Link>
+        <Link href="/projects" className={`NavElementContainer ${activeItem === 'projects' ? 'active' : ''}`}>
+          <li className="NavElement" >
+            Portfolio
+          </li>
+        </Link>
+        <Link href="/contact" className={`NavElementContainer ${activeItem === 'contact' ? 'active' : ''}`}>
+          <li className="NavElement" >
             Contact
-          </Link>
-        </li>
+          </li>
+        </Link>
       </ul>
       <div className='EmptyElement'></div>
     </nav>
