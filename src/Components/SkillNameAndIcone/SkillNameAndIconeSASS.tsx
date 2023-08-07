@@ -5,8 +5,8 @@ const SkillNameAndIconeSASS = () => {
   return (
     <SkillNameAndIcone
       src={SASS}
-      alt={'TypeScript skill icone'}
-      name={'TypeScript'}
+      alt={'SASS skill icone'}
+      name={'Sass'}
       size={20}
     />
   );

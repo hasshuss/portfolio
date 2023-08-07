@@ -6,7 +6,7 @@ const SkillNameAndIconeHTML = () => {
     <SkillNameAndIcone
       src={html}
       alt={'HTML5 skill icone'}
-      name={'HTML 5'}
+      name={'HTML'}
       size={20}
     />
   );

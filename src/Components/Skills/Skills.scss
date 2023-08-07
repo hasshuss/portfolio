@@ -3,7 +3,7 @@
 
 .skillsListContainer{
 display:flex;
-justify-content: space-between;
+justify-content: space-around;
 flex-wrap:wrap;
 margin-left: 20px;
 margin-right: 20px;
@@ -16,12 +16,15 @@ margin-right: 20px;
     border-style: groove;
     margin-top: 20px;
     @include shadow;
+    text-align: center;
 }
 
 .h1Skills{
     font-size: 30px;
     margin-top: 30px;
     margin-bottom: 30px;
+    text-justify: center;
+
 }
 
 .h2Skills{
@@ -33,14 +36,21 @@ margin-right: 20px;
 .SkillNameContainer{
     display: flex;
     flex-direction: row;
-    margin: 5px;
+    margin: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .TechName{
-    margin-left: 5px;
+    margin-left: 2px;
 }
 
 .TechContainer{
     display: flex;
-    flex-direction: column;
+    flex-wrap:wrap;
+    justify-content:center
+}
+
+.SkillSection{
+    justify-content:center;
 }

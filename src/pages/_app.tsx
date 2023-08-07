@@ -7,6 +7,7 @@ import '../Components/nav/nav.scss';
 import './index.scss';
 import '../Components/Skills/Skills.scss';
 import '../Components/Collapse/Collapse.scss';
+import '../Components/Projets/Projets.scss';
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();

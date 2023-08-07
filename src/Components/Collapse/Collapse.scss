@@ -2,7 +2,7 @@
 
 
 .titre{
-    color:white;
+    color:black;
     margin-top: auto;
     margin-bottom:auto;
 }
@@ -11,12 +11,13 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: blue;
+    background-color: #00FFEE;
     padding:10px 20px 10px 15px;
     border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     font-size: 18px;
     font-weight: 500;
-    color:white;
     }
 
 .title:hover{
@@ -46,8 +47,9 @@
     transition: max-height 0.1s ease;
     font-size: 18px;
     background-color: #F6F6F6;
-    color: blue;
+    color: black;
     padding:20px;
+    justify-content: center;
   }
   
 .open {

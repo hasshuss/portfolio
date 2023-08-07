@@ -3,47 +3,37 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 export default function Nav() {
-  const router = useRouter();
-  const [activeItem, setActiveItem] = useState('');
-
-  useEffect(() => {
-    const currentPath = router.pathname.substring(1);
-    setActiveItem(currentPath);
-  }, [router.pathname]);
-
-  console.log(activeItem);
 
   return (
     <nav id="nav">
       <ul className="NavContainer">
-        <Link  href="/" className={`NavElementContainer ${activeItem === '' ? 'active' : ''}` }>
-        
+        <Link href="/" className={`NavElementContainer`}>
+
           <li className="NavElement" >
             Home
           </li>
         </Link>
-        <Link href="/services" className={`NavElementContainer ${activeItem === 'services' ? 'active' : ''}`}>
+        <Link href="" className={`NavElementContainer`}>
           <li className="NavElement" >
             Services
           </li>
         </Link>
-        <Link href="/skillsPage" className={`NavElementContainer ${activeItem === 'skillsPage' ? 'active' : ''}`}>
+        <Link href="#AncreSkills" className={`NavElementContainer`}>
           <li className="NavElement" >
             Compétences
           </li>
         </Link>
-        <Link href="/projects" className={`NavElementContainer ${activeItem === 'projects' ? 'active' : ''}`}>
+        <Link href="" className={`NavElementContainer`}>
           <li className="NavElement" >
             Portfolio
           </li>
         </Link>
-        <Link href="/contact" className={`NavElementContainer ${activeItem === 'contact' ? 'active' : ''}`}>
+        <Link href="" className={`NavElementContainer`}>
           <li className="NavElement" >
             Contact
           </li>
         </Link>
       </ul>
-      <div className='EmptyElement'></div>
     </nav>
   );
 }

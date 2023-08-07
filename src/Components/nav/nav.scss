@@ -8,43 +8,54 @@
   align-items: center; 
   border-style: solid;
   color: lightgray;
-  border-width: 1px;
+  border-width: 2px;
   font-size: 20px;
   border-color: lightgray;
   text-align: center;
   flex-grow: 1;
   font-weight: 300;
   height: 100%;
-  width: 200px;
+  width:100%;
   line-height: 100%;
+  margin:10px;
+  border-radius:20px;
+  
 }
 
 .NavContainer {
   justify-content: space-between;
   display: flex;
-  flex-direction: column;
-  background-color: white;
-  height:100%
+  flex-direction: row;
+  position: fixed;
+  top: 20px;
+  z-index: 3;
+}
+
+.NavElement{
+  margin:10px;
 }
 
 .NavElementContainer:hover{
-  color:blue;
+  color: #00FFEE;
   cursor: pointer;
+  border-color :#00FFEE;
 }
 
 .NavElement:hover {
-  color: blue;
+  color:  #00FFEE;
+  
 }
 
 #nav {
-  justify-content: space-between;
+  justify-content: space-around;
   display: flex;
-  flex-direction: column;
-  background-color: white;
+  flex-direction: row; /* Définissez également la direction de flexion en "row" */
+  width: 100%;
+  position: relative;
 }
 
 .active {
-  border-right: 0;
-  color: blue;
+  color:  #00FFEE;
+  border-color :  #00FFEE;
   @include shadow;
 }

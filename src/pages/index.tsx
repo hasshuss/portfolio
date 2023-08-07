@@ -2,6 +2,13 @@ import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import Nav from '../Components/nav/nav'
 import Presentation from '../Components/Presentation'
+import Image from 'next/image'
+import huss from '../images/huss.jpg'
+import backgroundIMG from "../images/Background.png"
+import Skills from '@/Components/Skills/Skills'
+import Projets from '@/Components/Projets/Projets'
+
+
 
 
 export default function Index()
@@ -16,10 +23,24 @@ export default function Index()
       </Head>
       <Nav />
       <section className='PresentationContainer'>
+<Image
+src={huss}
+alt={"Hassan Cheikh Hussein"}
+className='hussIMG'
+/>
+<Image
+src={backgroundIMG}
+alt={"background image"}
+className='backgroundIMG'
+/>
+
         <article className='PresentationText'>
       <Presentation />
       </article>
       </section>
+      <Skills />
+      <Projets />
+
     </main>
   )
 }

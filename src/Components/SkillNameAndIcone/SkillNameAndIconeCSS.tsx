@@ -6,7 +6,7 @@ const SkillNameAndIconeCSS = () => {
     <SkillNameAndIcone
       src={css}
       alt={'CSS3 skill icone'}
-      name={'CSS 3'}
+      name={'CSS'}
       size={20}
     />
   );
