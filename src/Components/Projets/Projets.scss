@@ -3,7 +3,7 @@
     height:100%;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    object-fit: cover;
+    object-fit:scale-down;
 }
 
 .ProjetsContainer{
@@ -15,5 +15,8 @@
 
 .h2{
     font-size:40px;
-    color:white
+}
+
+.ProjetImgContainer{
+    height:400px
 }

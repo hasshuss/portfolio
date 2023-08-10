@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Vector from '../../images/Vector.png';
 
-
 interface CollapseProps {
   title: string | JSX.Element;
   content: string | JSX.Element;
@@ -17,7 +16,7 @@ const Collapse: React.FC<CollapseProps> = ({ title, content, isOpen }) => {
   };
 
   return (
-    <div className='collapse'>
+    <div className={`collapse ${isCollapsed ? '' : 'expanded'}`}>
       <div onClick={handleToggle} className='title'>
         <div className='titre'>{title}</div>
         <Image

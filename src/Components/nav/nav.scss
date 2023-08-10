@@ -6,11 +6,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center; 
-  border-style: solid;
-  color: lightgray;
-  border-width: 2px;
   font-size: 20px;
-  border-color: lightgray;
   text-align: center;
   flex-grow: 1;
   font-weight: 300;
@@ -20,6 +16,7 @@
   margin:10px;
   border-radius:20px;
   
+  
 }
 
 .NavContainer {
@@ -27,35 +24,36 @@
   display: flex;
   flex-direction: row;
   position: fixed;
-  top: 20px;
+  width:100%;
+  padding-left: 30%;
+  padding-right: 30%;
+  backdrop-filter: saturate(20%) blur(20px);
   z-index: 3;
+  transition:background-color 2s;
+  background: rgba(251, 251, 253, .8);
 }
 
 .NavElement{
-  margin:10px;
+  margin:10px
 }
+
 
 .NavElementContainer:hover{
-  color: #00FFEE;
   cursor: pointer;
-  border-color :#00FFEE;
 }
 
-.NavElement:hover {
-  color:  #00FFEE;
-  
-}
 
 #nav {
   justify-content: space-around;
   display: flex;
-  flex-direction: row; /* Définissez également la direction de flexion en "row" */
+  flex-direction: row; 
   width: 100%;
+  height:100%;
   position: relative;
+  background-color:#f5f5f7;
+
 }
 
 .active {
-  color:  #00FFEE;
-  border-color :  #00FFEE;
-  @include shadow;
+  text-decoration: underline;
 }

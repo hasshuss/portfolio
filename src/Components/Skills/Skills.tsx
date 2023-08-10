@@ -12,7 +12,7 @@ import Card from '../Cards/Card'
 export default function Skills() {
     return (
       <section className="SkillSection" id="AncreSkills" >
-        <h2 className='h2'>Compétences</h2>
+        <h2 id='h2SkillsSection' className='h2Skills' >Compétences</h2>
         <section className="skillsListContainer">
 
           <Card
@@ -52,10 +52,7 @@ export default function Skills() {
             <CollapseStackTechClosed
               content={
                 <div className='TechContainer'>
-                  <SkillNameAndIconeHTML />
-                  <SkillNameAndIconeCSS />
-                  <SkillNameAndIconeReact />
-                  <SkillNameAndIconeNext />
+Bientôt :p
                 </div>
               }
               />

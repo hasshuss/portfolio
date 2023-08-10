@@ -2,7 +2,7 @@
 
 
 .titre{
-    color:black;
+    color:rgb(41, 151, 255);
     margin-top: auto;
     margin-bottom:auto;
 }
@@ -10,14 +10,18 @@
 .title{
     display: flex;
     flex-direction: row;
+    border-color: #f5f5f7;
+    border-width: 2px;
+    border-style: solid;
     justify-content: space-between;
-    background-color: #00FFEE;
+    background-color: black;
     padding:10px 20px 10px 15px;
     border-radius: 5px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     font-size: 18px;
     font-weight: 500;
+    color:white;
     }
 
 .title:hover{
@@ -27,7 +31,6 @@
 .collapse{
     margin-bottom: 20px;
     border-radius: 5px;
-    @include shadow;
     width:80%;
     margin-left: auto;
     margin-right: auto;
@@ -43,18 +46,33 @@
 
 .content {
     max-height: 0;
-    display: none;
-    transition: max-height 0.1s ease;
+    transition: max-height 0.8s ease-in-out, opacity 0.8s ease-in-out;
     font-size: 18px;
-    background-color: #F6F6F6;
+    background-color: #f5f5f7;
     color: black;
     padding:20px;
     justify-content: center;
+    opacity: 0;
+    transform-origin: top; 
+    transform: scaleY(1);
   }
   
 .open {
     display:flex;
+    max-height: 500px;
+    opacity: 1;
+    transition: max-height 0.8s ease-in-out, opacity 0.8s ease-in-out;
+  }
+
+  .expanded .open {
     max-height: 500px; 
+    opacity: 1;
+  }
+  
+  .expanded .content {
+    max-height: 500px; 
+    opacity: 1;
+    transform: scaleY(1);
   }
 
   @media (max-width: 768px){

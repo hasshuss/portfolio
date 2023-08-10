@@ -1,48 +1,36 @@
-import Head from 'next/head'
-import { Inter } from 'next/font/google'
-import Nav from '../Components/nav/nav'
-import Presentation from '../Components/Presentation'
-import Image from 'next/image'
-import huss from '../images/huss.jpg'
-import backgroundIMG from "../images/Background.png"
-import Skills from '@/Components/Skills/Skills'
-import Projets from '@/Components/Projets/Projets'
+import Head from 'next/head';
+import Nav from '../Components/nav/nav';
+import Presentation from '../Components/Presentation';
+import Skills from '../Components/Skills/Skills';
+import Projets from '../Components/Projets/Projets';
+import huss from '../images/huss.jpg';
+import Image from 'next/image';
 
 
-
-
-export default function Index()
-{
+export default function Index() {
   return (
     <main className='name'>
       <Head>
         <title>Web Developpeur - Hassan Cheikh Hussein</title>
-        <meta name="description" content="Web Developpeur - Hassan Cheikh-Hussein - Compétences, Portfolio, Services" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="../../public/favicon.ico" />
+        <meta
+          name='description'
+          content='Web Developpeur - Hassan Cheikh-Hussein - Compétences, Portfolio, Services'
+        />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Nav />
+      <header>
+        <Nav />
+      </header>
       <section className='PresentationContainer'>
-<Image
-src={huss}
-alt={"Hassan Cheikh Hussein"}
-className='hussIMG'
-/>
-<Image
-src={backgroundIMG}
-alt={"background image"}
-className='backgroundIMG'
-/>
+
 
         <article className='PresentationText'>
-      <Presentation />
-      </article>
+          <Presentation />
+        </article>
       </section>
       <Skills />
       <Projets />
-
     </main>
-  )
+  );
 }
-
-
