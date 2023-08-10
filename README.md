@@ -1,1 +1,1 @@
-Protfolio project using ReactJS with NextJS, TypeScript and Sass 
+Protfolio project with NextJS, TypeScript and Sass 
