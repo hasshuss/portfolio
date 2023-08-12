@@ -8,14 +8,13 @@ import './index.scss';
 import '../Components/Skills/Skills.scss';
 import '../Components/Collapse/Collapse.scss';
 import '../Components/Projets/Projets.scss';
+import '../Components/Contact/Contact.scss'
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
-  // Recherche la route correspondante pour le chemin actuel
   const matchedRoute = routes.find((route) => route.path === router.asPath);
 
-  // Rend le composant associé à la route ou le composant par défaut
   const RenderComponent = matchedRoute ? matchedRoute.component : Component;
 
   return <RenderComponent {...pageProps} />;

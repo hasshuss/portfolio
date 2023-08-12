@@ -9,13 +9,13 @@
 
 .skillsListContainer{
 display:flex;
-flex-direction: row;
+flex-wrap: wrap;
 justify-content: space-around;
-height:300px;
+height:auto;
 }
 
 .skillContainer{
-    width:23%;
+    width:40%;
     margin-bottom: 20px;
 
 }
@@ -52,8 +52,10 @@ height:300px;
 
 .TechContainer{
     display: flex;
-    flex-wrap:wrap;
-    justify-content:center
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center; /* Ajouté pour centrer verticalement */
 }
 
 .SkillSection{

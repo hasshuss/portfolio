@@ -3,8 +3,7 @@ import Nav from '../Components/nav/nav';
 import Presentation from '../Components/Presentation';
 import Skills from '../Components/Skills/Skills';
 import Projets from '../Components/Projets/Projets';
-import huss from '../images/huss.jpg';
-import Image from 'next/image';
+import Contact from '@/Components/Contact/Contact';
 
 
 export default function Index() {
@@ -31,6 +30,7 @@ export default function Index() {
       </section>
       <Skills />
       <Projets />
+      <Contact />
     </main>
   );
 }
