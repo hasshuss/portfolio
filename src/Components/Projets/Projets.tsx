@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from "next/image";
 import poktools from "../../images/projets/poktools.png";
 import Kasa from "../../images/projets/Kasa.jpg";
@@ -39,35 +39,50 @@ const Projets: React.FC = () => {
     },
   ];
 
+  const [autoScroll, setAutoScroll] = useState(true);
+
   const projectsLength = projects.length;
 
   const handleNext = () => {
+    setAutoScroll(false);
     setCurrent((current + 1) % projectsLength);
   };
 
   const handlePrevious = () => {
+    setAutoScroll(false);
     setCurrent((current - 1 + projectsLength) % projectsLength);
   };
+
+  useEffect(() => {
+    if (autoScroll) { // Vérifie si le défilement automatique est activé
+      const timer = setInterval(() => {
+        setCurrent((current + 1) % projectsLength);
+      }, 5000); // Met à jour l'index toutes les 5 secondes
+  
+      return () => clearInterval(timer); // Nettoie l'intervalle lors du démontage du composant
+    }
+  }, [autoScroll, current, projectsLength]); // Dépendances de l'effet
 
   const leftIndex = (current - 1 + projectsLength) % projectsLength;
   const rightIndex = (current + 1) % projectsLength;
 
   return (
     <section className="SectionAppleStyle">
-      <div className="ProjetsContainer">
+    <h2 className='h2'>Portfolio</h2>
+    <div className="ProjetsContainer">
         <div
-          className="ProjetContainer left"
+          className="ProjetContainer left transition-effect"
           onClick={handlePrevious}
         >
           {renderProject(projects[leftIndex])}
         </div>
         <div
-          className="ProjetContainer center"
+          className="ProjetContainer center transition-effect"
         >
           {renderProject(projects[current])}
         </div>
         <div
-          className="ProjetContainer right"
+          className="ProjetContainer right transition-effect"
           onClick={handleNext}
         >
           {renderProject(projects[rightIndex])}
