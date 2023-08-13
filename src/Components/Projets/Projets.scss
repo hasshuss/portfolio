@@ -4,24 +4,34 @@
     overflow: hidden;
     position: relative;
     left: -25%; /* Décale le conteneur vers la gauche pour centrer le projet du milieu */
-    transition: transform 10s ease-in-out;
     margin-top: 50px;
+    gap:10px;
   }
   
   .ProjetContainer {
     flex-shrink: 0;
     overflow: hidden;
-    height: 600px; /* Hauteur fixe pour les projets */
+    height: 800px; /* Hauteur fixe pour les projets */
     width: 33.33%; /* Largeur uniforme pour tous les projets */
+    border-width: 1px;
+    border-style: solid;
+
   }
   
   .ProjetContainer.left,
   .ProjetContainer.right {
-    opacity: 70%;
+    opacity: 50%;
     overflow: hidden;
   }
-  
 
+  .ProjetContainer.left,
+  .ProjetContainer.right :hover {
+  cursor:pointer
+  }
+  
+  .ProjetImgContainer {
+    height: 80%; /* Utilise 80% de la hauteur du parent */
+  }
   
   .ProjetContainer.center {
     position: relative; /* Pour le centrer horizontalement */
@@ -31,12 +41,10 @@
   .ProjetIMG {
     width: 100%;
     height: 100%;
-    object-fit: contain;
   }
   
   .ProjetImgContainer {
     position: relative;
-    height: 100%; /* Utilise la hauteur définie pour le projet */
     overflow: hidden;
     width: 100%;
   }
@@ -56,8 +64,8 @@
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    z-index: 3;
-    background-color: red; /* couleur de fond temporaire */
-    border: 2px solid blue; /* bordure temporaire */
     position:relative
   }
+
+
+
