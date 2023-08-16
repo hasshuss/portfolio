@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 import Image from "next/image";
 import poktools from "../../images/projets/poktools.png";
 import Kasa from "../../images/projets/Kasa.jpg";
@@ -32,19 +32,19 @@ const Projets: React.FC = () => {
       link: "#",
     },
     {
-      src: IMG,
+      src: poktools,
       alt: "une image cool",
       skills: [<SkillNameAndIconeSASS key="sass" />, <SkillNameAndIconeJS key="JS" />, <SkillNameAndIconeReact key="React" />],
       link: "#",
     },
     {
-      src: IMG,
+      src: Kasa,
       alt: "une image cool",
       skills: [<SkillNameAndIconeSASS key="sass" />, <SkillNameAndIconeJS key="JS" />, <SkillNameAndIconeReact key="React" />],
       link: "#",
     },
     {
-      src: IMG,
+      src: poktools,
       alt: "une image cool",
       skills: [<SkillNameAndIconeSASS key="sass" />, <SkillNameAndIconeJS key="JS" />, <SkillNameAndIconeReact key="React" />],
       link: "#",
@@ -53,49 +53,44 @@ const Projets: React.FC = () => {
 
   const [autoScroll, setAutoScroll] = useState(true);
   const [animationClass, setAnimationClass] = useState('');
+  const [previousIndex, setPreviousIndex] = useState(-1);
   const projectsLength = projects.length;
 
   const handleAnimation = (newIndex: number, animationClass: string) => {
-    setAutoScroll(false);
+    setPreviousIndex(current); // Mettre à jour l'indice de l'élément précédent
     setAnimationClass(animationClass);
-    
-    const timeoutDuration = 1000;
-
+  
+    const timeoutDuration = 950;
+  
     setTimeout(() => {
       setCurrent(newIndex);
       setAnimationClass('');
-      setAutoScroll(true);
     }, timeoutDuration);
   };
 
   const handleNext = () => {
     const newIndex = (current + 1) % projectsLength;
-    handleAnimation(newIndex, 'transition-effect-next');
+    handleAnimation(newIndex, 'transition-effect-next-center');
   };
 
   const handlePrevious = () => {
     const newIndex = (current - 1 + projectsLength) % projectsLength;
-    handleAnimation(newIndex, 'transition-effect-prev');
+    handleAnimation(newIndex, 'transition-effect-prev-center');
+  };
+
+  const NextAndStopAutoScroll = () => {
+    handleNext();
+    setAutoScroll(false);
+  };
+
+  const PrevAndStopAutoScroll =() =>{
+    handlePrevious();
+    setAutoScroll(false);
   };
 
 
-
-  useEffect(() => {
-    const handleTransitionEnd = () => {
-      setAnimationClass(''); // Réinitialisez l'animationClass une fois que l'animation est terminée
-      setAutoScroll(false); // Réactivez l'auto-défilement
-    };
-  
-    const animatedElement = document.querySelector('.ProjetContainer.center') as HTMLElement;
-    animatedElement.addEventListener('transitionend', handleTransitionEnd);
-
-    return () => {
-      animatedElement.removeEventListener('transitionend', handleTransitionEnd);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (autoScroll) {
+  useLayoutEffect(() => {
+    if (autoScroll === true) {
       const timer = setInterval(() => {
         const newIndex = (current + 1) % projectsLength;
         handleAnimation(newIndex, 'transition-effect-next');
@@ -114,64 +109,64 @@ const Projets: React.FC = () => {
 
 
 
-return (
-  <section className="SectionAppleStyle">
-    <h2 className='h2'>Portfolio</h2>
-    <div className={`ProjetsContainer ${animationClass}`}>
-      <div className={`ProjetContainer left ${animationClass === 'transition-effect-prev' ? 'previous' : ''}`} onClick={handlePrevious}>
-        <div className="ProjetImgContainer">
-          <Image src={projects[xtremLeftIndex].src} alt={projects[xtremLeftIndex].alt} className="ProjetIMG" />
+  return (
+    <section className="SectionAppleStyle" id="Portfolio">
+      <h2 className='h2'>Portfolio</h2>
+      <div className={`ProjetsContainer ${animationClass}`}>
+      <div className={`ProjetContainer left ${animationClass === 'transition-effect-prev' ? 'previous' : ''}`}>
+          <div className="ProjetImgContainer">
+            <Image src={projects[xtremLeftIndex].src} alt={projects[xtremLeftIndex].alt} className="ProjetIMG" />
+          </div>
+          <br />
+          <div className="ProjectSkillContainer">
+            {projects[xtremLeftIndex].skills}
+          </div>
+          <a className="link" href={projects[xtremLeftIndex].link}><span>{"visiter le site >"}</span></a>
         </div>
-        <br />
-        <div className="ProjectSkillContainer">
-          {projects[xtremLeftIndex].skills}
+        <div className={`ProjetContainer left ${animationClass === 'transition-effect-prev' ? 'previous' : ''}`} onClick={PrevAndStopAutoScroll}>
+          <div className="ProjetImgContainer">
+            <Image src={projects[leftIndex].src} alt={projects[leftIndex].alt} className="ProjetIMG" />
+          </div>
+          <br />
+          <div className="ProjectSkillContainer">
+            {projects[leftIndex].skills}
+          </div>
+          <a className="link" href={projects[leftIndex].link}><span>{"visiter le site >"}</span></a>
         </div>
-        <a className="link" href={projects[xtremLeftIndex].link}><span>{"visiter le site >"}</span></a>
+        <div className={`ProjetContainer center ${animationClass === 'transition-effect-prev' || animationClass === 'transition-effect-next' ? 'center' : ''}`} >
+          <div className="ProjetImgContainer">
+            <Image src={projects[current].src} alt={projects[current].alt} className="ProjetIMG" />
+          </div>
+          <br />
+          <div className="ProjectSkillContainer">
+            {projects[current].skills}
+          </div>
+          <a className="link" href={projects[current].link}><span>{"visiter le site >"}</span></a>
+        </div>
+        <div className={`ProjetContainer right ${animationClass === 'transition-effect-next' ? 'next' : ''}`} onClick={NextAndStopAutoScroll} data-index={rightIndex}>
+          <div className="ProjetImgContainer">
+            <Image src={projects[rightIndex].src} alt={projects[rightIndex].alt} className="ProjetIMG" />
+          </div>
+          <br />
+          <div className="ProjectSkillContainer">
+            {projects[rightIndex].skills}
+          </div>
+          <a className="link" href={projects[rightIndex].link}><span>{"visiter le site >"}</span></a>
+        </div>
+        <div className={`ProjetContainer right ${animationClass === 'transition-effect-next' ? 'next' : ''}`} data-index={xtremRightIndex}>
+          <div className="ProjetImgContainer">
+            <Image src={projects[xtremRightIndex].src} alt={projects[xtremRightIndex].alt} className="ProjetIMG" />
+          </div>
+          <br />
+          <div className="ProjectSkillContainer">
+            {projects[xtremRightIndex].skills}
+          </div>
+          <a className="link" href={projects[xtremRightIndex].link}><span>{"visiter le site >"}</span></a>
+        </div>
       </div>
-      <div className={`ProjetContainer left ${animationClass === 'transition-effect-prev' ? 'previous' : ''}`} onClick={handlePrevious}>
-        <div className="ProjetImgContainer">
-          <Image src={projects[leftIndex].src} alt={projects[leftIndex].alt} className="ProjetIMG" />
-        </div>
-        <br />
-        <div className="ProjectSkillContainer">
-          {projects[leftIndex].skills}
-        </div>
-        <a className="link" href={projects[leftIndex].link}><span>{"visiter le site >"}</span></a>
-      </div>
-      <div className={`ProjetContainer center ${animationClass === 'transition-effect-prev' || animationClass === 'transition-effect-next' ? 'center' : ''}`}>
-        <div className="ProjetImgContainer">
-          <Image src={projects[current].src} alt={projects[current].alt} className="ProjetIMG" />
-        </div>
-        <br />
-        <div className="ProjectSkillContainer">
-          {projects[current].skills}
-        </div>
-        <a className="link" href={projects[current].link}><span>{"visiter le site >"}</span></a>
-      </div>
-      <div className={`ProjetContainer right ${animationClass === 'transition-effect-next' ? 'next' : ''}`} onClick={handleNext}>
-        <div className="ProjetImgContainer">
-          <Image src={projects[rightIndex].src} alt={projects[rightIndex].alt} className="ProjetIMG" />
-        </div>
-        <br />
-        <div className="ProjectSkillContainer">
-          {projects[rightIndex].skills}
-        </div>
-        <a className="link" href={projects[rightIndex].link}><span>{"visiter le site >"}</span></a>
-      </div>
-      <div className={`ProjetContainer right ${animationClass === 'transition-effect-next' ? 'next' : ''}`} onClick={handleNext}>
-        <div className="ProjetImgContainer">
-          <Image src={projects[xtremRightIndex].src} alt={projects[xtremRightIndex].alt} className="ProjetIMG" />
-        </div>
-        <br />
-        <div className="ProjectSkillContainer">
-          {projects[xtremRightIndex].skills}
-        </div>
-        <a className="link" href={projects[xtremRightIndex].link}><span>{"visiter le site >"}</span></a>
-      </div>
-    </div>
-  </section>
-);
-}
+    </section>
+  );
+  }
 
 export default Projets;
 

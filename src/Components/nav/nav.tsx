@@ -7,7 +7,7 @@ export default function Nav() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['#Services', '#AncreSkills', '#Portfolio', '#Contact'];
+      const sections = [ '#AncreSkills', '#Portfolio', '#Contact'];
       const links = sections.map((section) => document.querySelector(`[href="${section}"]`));
 
       let activeSection = '';
@@ -50,10 +50,7 @@ export default function Nav() {
     <nav id="nav">
       <ul className="NavContainer">
         <li className={`NavElementContainer ${homeActiveClass}`}>
-          <a className='NavElement' href="/">Home</a>
-        </li>
-        <li className={`NavElementContainer ${activeLink === '#Services' ? 'active' : ''}`}>
-          <a className='NavElement' href="#Services">Services</a>
+          <a className='NavElement' href="/">Acceuil</a>
         </li>
         <li className={`NavElementContainer ${activeLink === '#AncreSkills' ? 'active' : ''}`}>
           <a className='NavElement' href="#AncreSkills">Compétences</a>

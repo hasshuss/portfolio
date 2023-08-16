@@ -1,12 +1,15 @@
-@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap);
 
 body{
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
     height:100%;
-     background-color:white;
-     color:black;
+    background-color:white;
+    color:black;
 }
 
 .link{
     color:rgb(41, 151, 255);
+}
+
+.h2{
+    font-size: 40px;
 }
