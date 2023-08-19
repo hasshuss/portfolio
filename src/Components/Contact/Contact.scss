@@ -4,15 +4,15 @@
 form {
     display: grid;
     gap: 1rem;
-    width:60%;
-    margin-right: auto;
-    margin-left:auto;
   }
   
   form div {
-    display: grid;
+    display: flex;
     align-items: center;
     gap: 0.5rem;
+    justify-content: center;
+    flex-direction: column;
+    
   }
   
   form label {
@@ -64,5 +64,7 @@ form {
   .button:hover {
     cursor: pointer;
   }
+
+  
 
   

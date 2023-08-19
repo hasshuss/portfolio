@@ -8,7 +8,14 @@ import './index.scss';
 import '../Components/Skills/Skills.scss';
 import '../Components/Collapse/Collapse.scss';
 import '../Components/Projets/Projets.scss';
-import '../Components/Contact/Contact.scss'
+import '../Components/Contact/Contact.scss';
+import '../Components/TextLink/TextLink.scss';
+import '../Components/Presentation/Presentation.scss';
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css"; // Import the CSS
+
+config.autoAddCss = false;
+
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();

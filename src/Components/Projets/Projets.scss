@@ -89,6 +89,12 @@
     opacity:50%;
 
   }
+
+  .LinksContainer{
+    display:flex;
+    justify-content: space-around;
+    flex-direction: row;
+  }
   
   @keyframes scrollNext {
     0% {

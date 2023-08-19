@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
+import background from "../../images/logohch.png"
+
 
 export default function Nav() {
   const [activeLink, setActiveLink] = useState<string>('');
@@ -47,8 +50,20 @@ export default function Nav() {
   const homeActiveClass = isHomePage && !activeLink ? 'active' : '';
 
   return (
+    <header>
+
+      
     <nav id="nav">
+      <div className='LogoHeader'>
+    <Image
+      src={background}
+      alt="Hassan Cheikh Hussein"
+      width={40}
+      height={40}
+      />
+      </div>
       <ul className="NavContainer">
+        
         <li className={`NavElementContainer ${homeActiveClass}`}>
           <a className='NavElement' href="/">Acceuil</a>
         </li>
@@ -63,5 +78,6 @@ export default function Nav() {
         </li>
       </ul>
     </nav>
+    </header>
   );
 }

@@ -5,22 +5,17 @@
 .NavElementContainer {
   display: flex;
   justify-content: space-around;
-  align-items: center; 
   font-size: 20px;
-  text-align: center;
-  flex-grow: 1;
   font-weight: 300;
   height: 100%;
   width:100%;
   line-height: 100%;
   margin:10px;
-  border-radius:20px;
   
   
 }
 
 .NavContainer {
-  justify-content: space-around;
   display: flex;
   flex-direction: row;
   position: fixed;
@@ -44,7 +39,6 @@
 
 
 #nav {
-  justify-content: space-around;
   display: flex;
   flex-direction: row; 
   width: 100%;
@@ -56,4 +50,12 @@
 
 .active {
   text-decoration: underline;
+}
+
+.LogoHeader{
+display:flex;
+z-index: 4;
+position:fixed;
+top:10px;
+left:30px;
 }

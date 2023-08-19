@@ -1,0 +1,41 @@
+
+.PresentationContainer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    background-color: #f5f5f7;
+    align-items: center; 
+    justify-content: space-around;
+  }
+  
+  .PresentationText {
+    font-size: 250%;
+    color: black;
+    display:none
+  }
+
+  .LogoContainer{
+    position:absolute;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    right:5%;
+    margin-top: 60px;
+  }
+
+  .h1{
+    font-size: 40px;
+    margin-top: 20px;
+  }
+
+  .backgroundIMG{
+    width:100%;
+    object-fit:cover;
+    height:800px;
+  }
+
+  .FaIcones{
+    color:#06c;
+    display: flex;
+    justify-content: space-around;
+  }
