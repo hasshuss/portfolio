@@ -4,15 +4,15 @@
     display: flex;
     width: 150%; /* Augmente la largeur pour permettre un débordement des côtés */
     position: relative;
-    left: -75%; /* Décale le conteneur vers la gauche pour centrer le projet du milieu */
+    left: -100%; /* Décale le conteneur vers la gauche pour centrer le projet du milieu */
     margin-top: 50px;
   }
   
   .ProjetContainer {
     flex-shrink: 0;
     overflow: hidden;
-    height: 800px; /* Hauteur fixe pour les projets */
-    width: 33.33333%; /* Largeur uniforme pour tous les projets */
+    height: 900px; /* Hauteur fixe pour les projets */
+    width: 40%; /* Largeur uniforme pour tous les projets */
   }
 
   .ProjetContainer.left,
@@ -26,7 +26,7 @@
   }
   
   .ProjetImgContainer {
-    height: 80%; /* Utilise 80% de la hauteur du parent */
+    height: 85%; /* Utilise 80% de la hauteur du parent */
   }
   
   .ProjetContainer.center {
@@ -101,7 +101,7 @@
       transform: translateX(0%);
     }
     100% {
-      transform: translateX(-33%);
+      transform: translateX(-40%);
     }
   }
   
@@ -110,7 +110,7 @@
       transform: translateX(0%);
     }
     100% {
-      transform: translateX(33%);
+      transform: translateX(40%);
     }
   }
 
@@ -118,3 +118,69 @@
     display: none;
   }
 
+
+  @media (max-width: 1700px) {
+    .ProjetContainer {
+
+      height: 700px; 
+    }
+  }
+
+
+  @media (max-width: 1340px) {
+    .ProjetContainer {
+
+      height: 600px; 
+    }
+  }
+
+  @media (max-width: 1150px) {
+    .ProjetContainer {
+
+      height: 500px; 
+    }
+  }
+
+  @media (max-width: 958px) {
+    .ProjetContainer {
+
+      height: 400px; 
+    }
+    .ProjetImgContainer {
+      height: 80%; 
+    }
+
+  }
+
+  @media (max-width: 714px) {
+    .ProjetContainer {
+
+      height: 350px; 
+    }
+  }
+
+
+  @media (max-width: 612px) {
+    .ProjetContainer {
+      height: 300px; 
+    }
+    .ProjetImgContainer {
+      height: 75%; 
+    }
+    .ProjectSkillContainer .TechName {
+      display: none;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .ProjetContainer {
+      height: 250px; 
+    }
+    .ProjetImgContainer {
+      height: 60%; 
+    }
+    .LinksContainer{
+      flex-direction: column;
+      align-items: center;
+    }
+  }
