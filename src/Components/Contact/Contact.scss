@@ -1,6 +1,32 @@
 @import '../../styles/mixins.scss';
 
 
+.ContactContainer{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.ContactList{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color:black;
+  align-items: start;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.ContactText{
+  margin-left: 5px;
+}
+
+.ContactItem:hover{
+cursor: pointer;
+color:#06c;
+}
+
+
 form {
     display: grid;
     gap: 1rem;

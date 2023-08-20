@@ -1,4 +1,9 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import {faPhoneVolume} from '@fortawesome/free-solid-svg-icons';
+
 
 function Contact() {
   const [showModal, setShowModal] = useState(false);
@@ -32,32 +37,56 @@ function Contact() {
   return (
     <section className='SectionAppleStyle' id='Contact'>
       <h2 className='h2'>Me Contacter</h2>
-      <form className="formulaire" onSubmit={handleSubmit} itemScope itemType="http://schema.org/ContactPoint">
-        <div>
-          <label className="formulaireSmall" htmlFor="name">Nom</label>
-          <input name="name" autoComplete="name" className="formulaireSmall"  type="text" id="name" required />
-        </div>
-        <div>
-          <label className="formulaireSmall" htmlFor="email">Email</label>
-          <input name="email" autoComplete="email" className="formulaireSmall"  type="email" id="email" required />
-        </div>
-        <div>
-          <label className="formulaireBig" htmlFor="message">Message</label>
-          <textarea name="message" autoComplete="off" className="formulaireBig" id="message" required></textarea>
-        </div>
-        <div>
-          <button type="submit" className="button">Envoyer</button>
-        </div>
-      </form>
-
-      {showModal && (
-        <div className="modal">
-          <div className="modal-content">
-            <span className="close" onClick={() => setShowModal(false)}>&times;</span>
-            <p>{modalContent}</p>
+      <article className='ContactContainer'>
+        <article className='ContactList'>
+          <div className='ContactItem'>
+            <a href='https://www.linkedin.com/in/hassan-cheikh-hussein-5907a0227/' target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faLinkedin} size="2xl" className='icone' />
+              <span className='ContactText'>Linkedin</span>
+            </a>
+            </div>
+            <div className='ContactItem'>
+            <a href=''>
+              <FontAwesomeIcon icon={faEnvelope} size="2xl" className='icone' />
+              <span className='ContactText'>hasscrpt@gmail.com</span>
+            </a>
           </div>
-        </div>
-      )}
+          <div className='ContactItem'>
+            <a href=''>
+            <FontAwesomeIcon icon={faPhoneVolume} size="2xl" className='icone' />
+              <span className='ContactText'>+31 6 29 48 10 76</span>
+            </a>
+          </div>
+        </article>
+
+
+        <form className="formulaire" onSubmit={handleSubmit} itemScope itemType="http://schema.org/ContactPoint">
+          <div>
+            <label className="formulaireSmall" htmlFor="name">Nom</label>
+            <input name="name" autoComplete="name" className="formulaireSmall" type="text" id="name" required />
+          </div>
+          <div>
+            <label className="formulaireSmall" htmlFor="email">Email</label>
+            <input name="email" autoComplete="email" className="formulaireSmall" type="email" id="email" required />
+          </div>
+          <div>
+            <label className="formulaireBig" htmlFor="message">Message</label>
+            <textarea name="message" autoComplete="off" className="formulaireBig" id="message" required></textarea>
+          </div>
+          <div>
+            <button type="submit" className="button">Envoyer</button>
+          </div>
+        </form>
+
+        {showModal && (
+          <div className="modal">
+            <div className="modal-content">
+              <span className="close" onClick={() => setShowModal(false)}>&times;</span>
+              <p>{modalContent}</p>
+            </div>
+          </div>
+        )}
+      </article>
     </section>
   );
 }

@@ -10,7 +10,7 @@ export default function Nav() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = [ '#AncreSkills', '#Portfolio', '#Contact'];
+      const sections = ['#AncreSkills', '#Portfolio', '#Contact'];
       const links = sections.map((section) => document.querySelector(`[href="${section}"]`));
 
       let activeSection = '';
@@ -51,33 +51,29 @@ export default function Nav() {
 
   return (
     <header>
-
-      
-    <nav id="nav">
-      <div className='LogoHeader'>
-    <Image
-      src={background}
-      alt="Hassan Cheikh Hussein"
-      width={40}
-      height={40}
-      />
-      </div>
-      <ul className="NavContainer">
-        
-        <li className={`NavElementContainer ${homeActiveClass}`}>
-          <a className='NavElement' href="/">Acceuil</a>
-        </li>
-        <li className={`NavElementContainer ${activeLink === '#AncreSkills' ? 'active' : ''}`}>
-          <a className='NavElement' href="#AncreSkills">Compétences</a>
-        </li>
-        <li className={`NavElementContainer ${activeLink === '#Portfolio' ? 'active' : ''}`}>
-          <a className='NavElement' href="#Portfolio">Portfolio</a>
-        </li>
-        <li className={`NavElementContainer ${activeLink === '#Contact' ? 'active' : ''}`}>
-          <a className='NavElement' href="#Contact">Contact</a>
-        </li>
-      </ul>
-    </nav>
+      <nav id="nav">
+        <div className='LogoHeader'>
+          <a href='https://www.cheikh-hussein.com/'>
+          <Image
+            src={background}
+            alt="Hassan Cheikh Hussein"
+            width={40}
+            height={40}
+          />
+          </a>
+        </div>
+        <ul className="NavContainer">
+          <li className={`NavElementContainer ${activeLink === '#AncreSkills' ? 'active' : ''}`}>
+            <a className='NavElement' href="#AncreSkills">Compétences</a>
+          </li>
+          <li className={`NavElementContainer ${activeLink === '#Portfolio' ? 'active' : ''}`}>
+            <a className='NavElement' href="#Portfolio">Portfolio</a>
+          </li>
+          <li className={`NavElementContainer ${activeLink === '#Contact' ? 'active' : ''}`}>
+            <a className='NavElement' href="#Contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
     </header>
   );
 }

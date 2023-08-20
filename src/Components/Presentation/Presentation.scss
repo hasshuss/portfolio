@@ -35,7 +35,14 @@
   }
 
   .FaIcones{
-    color:#06c;
     display: flex;
     justify-content: space-around;
+    color:gray;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .icone:hover{
+   color:#06c;
+   cursor: pointer;
   }
