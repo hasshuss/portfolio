@@ -18,7 +18,7 @@ const TextLink: React.FC<TextLinkProps> = ({ link,content }) => {
         alt={''}
         className={"vector"}
         width={10}
-        height={10}
+        height={16}
       />
       
       </a>

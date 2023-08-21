@@ -3,7 +3,8 @@ import Image from "next/image";
 import poktools from "../../images/projets/poktools.png";
 import Kasa from "../../images/projets/Kasa.jpg";
 import Booki from "../../images/projets/Booki.png"
-import Nina from "../../images/projets/Nina.jpg"
+import Nina from "../../images/projets/Nina.jpg";
+import portfolio from "../../images/projets/portfolio.jpg"
 import SkillNameAndIconeSASS from "../SkillNameAndIcone/SkillNameAndIconeSASS";
 import SkillNameAndIconeTS from "../SkillNameAndIcone/SkillNameAndIconeTS";
 import SkillNameAndIconeNext from "../SkillNameAndIcone/SkillNameAndIconeNEXT";
@@ -53,11 +54,11 @@ const Projets: React.FC = () => {
       gitlink: 'https://github.com/hasshuss/Projet-05-OpenClassRoom-dev-web'
     },
     {
-      src: Kasa,
-      alt: "une image cool",
-      skills: [<SkillNameAndIconeSASS key="sass" />, <SkillNameAndIconeJS key="JS" />, <SkillNameAndIconeReact key="React" />],
-      link: "#",
-      gitlink: ''
+      src: portfolio,
+      alt: "Image du site portfolio de Hassan Cheikh Hussein",
+      skills: [<SkillNameAndIconeSASS key="sass" />, <SkillNameAndIconeTS key="TS" />, <SkillNameAndIconeNext key="Next" />],
+      link: "https://www.cheikh-hussein.com/",
+      gitlink: 'https://github.com/hasshuss/portfolio'
     },
   ];
 

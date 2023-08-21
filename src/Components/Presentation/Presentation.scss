@@ -32,6 +32,8 @@
     width:100%;
     object-fit:cover;
     height:800px;
+    opacity:0;
+    transition: opacity 2s;
   }
 
   .FaIcones{
@@ -45,4 +47,13 @@
   .icone:hover{
    color:#06c;
    cursor: pointer;
+  }
+
+  #logo {
+    opacity: 0;             
+    transition: opacity 3s;  
+  }
+  
+ .visible {
+    opacity: 1; 
   }

@@ -22,7 +22,7 @@ const Collapse: React.FC<CollapseProps> = ({ title, content, isOpen }) => {
         <Image
           src={Vector}
           className={`arrow ${isCollapsed ? '' : 'rotate'}`}
-          alt='Arrow navigation'
+          alt=''
           width={20} 
           height={20} 
         />

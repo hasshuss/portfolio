@@ -4,6 +4,9 @@ import Presentation from '../Components/Presentation/Presentation';
 import Skills from '../Components/Skills/Skills';
 import Projets from '../Components/Projets/Projets';
 import Contact from '@/Components/Contact/Contact';
+import Footer from '@/Components/Footer/Footer';
+
+
 
 
 export default function Index() {
@@ -13,13 +16,16 @@ export default function Index() {
     <title>Web Developpeur - Hassan Cheikh Hussein</title>
     <meta name='viewport' content='width=device-width, initial-scale=1' />
     </Head>
+    <Nav />
+
       <main className='name'>
-      <Nav />
       <Presentation />
       <Skills />
       <Projets />
       <Contact />
     </main>
+    <Footer />
+
     </>
   );
 }

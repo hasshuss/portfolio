@@ -11,6 +11,7 @@ import '../Components/Projets/Projets.scss';
 import '../Components/Contact/Contact.scss';
 import '../Components/TextLink/TextLink.scss';
 import '../Components/Presentation/Presentation.scss';
+import "../Components/Footer/Footer.scss"
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css"; // Import the CSS
 

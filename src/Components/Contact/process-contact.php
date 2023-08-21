@@ -21,10 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $headers = "From: $email";
 
     // Envoi de l'e-mail
-    if (mail($to, $subject, $body, $headers)) {
         echo "Votre message a été envoyé avec succès.";
-    } else {
-        echo "Une erreur s'est produite lors de l'envoi du message.";
-    }
+    
 }
 ?>

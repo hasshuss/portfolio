@@ -5,8 +5,23 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
+import React, { useEffect } from 'react';
 
-export default function Presentation() {
+const Presentation: React.FC = () => {
+  
+  useEffect(() => {
+    const logo: HTMLElement | null = document.getElementById("logo");
+    const back: HTMLCollectionOf<Element> = document.getElementsByClassName("backgroundIMG");
+    
+    if (logo) {
+      logo.classList.add("visible");
+    }
+    
+    for (let i = 0; i < back.length; i++) {
+      back[i].classList.add("visible");
+    }
+}, []);
+
 
   return (
     <section className='PresentationContainer'>
@@ -15,7 +30,7 @@ export default function Presentation() {
       alt={"image d'arriere plan représentant du développement web en ReactJS"}
       className='backgroundIMG'
       />
-      <figure className='LogoContainer'>
+      <figure className='LogoContainer' id="logo">
       <Image 
          src={monitor}
          alt={''}
@@ -45,3 +60,5 @@ export default function Presentation() {
 
   );
 }
+
+export default Presentation;
