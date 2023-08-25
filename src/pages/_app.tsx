@@ -9,9 +9,10 @@ import '../Components/Skills/Skills.scss';
 import '../Components/Collapse/Collapse.scss';
 import '../Components/Projets/Projets.scss';
 import '../Components/Contact/Contact.scss';
-import '../Components/TextLink/TextLink.scss';
+import '../Components/TextEvent/TextEvent.scss';
 import '../Components/Presentation/Presentation.scss';
 import "../Components/Footer/Footer.scss"
+import '../Components/Modal/Modal.scss'
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css"; // Import the CSS
 

@@ -1,41 +1,34 @@
 import Image from 'next/image';
-import monitor from '../../images/logohch.png'
-import background from "../../images/backgroundpre.jpg"
+import monitor from '../../images/logohch.webp'
+import background from "../../images/backgroundpre1.webp"
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-
+import Head from 'next/head';
 import React, { useEffect } from 'react';
 
 const Presentation: React.FC = () => {
   
-  useEffect(() => {
-    const logo: HTMLElement | null = document.getElementById("logo");
-    const back: HTMLCollectionOf<Element> = document.getElementsByClassName("backgroundIMG");
-    
-    if (logo) {
-      logo.classList.add("visible");
-    }
-    
-    for (let i = 0; i < back.length; i++) {
-      back[i].classList.add("visible");
-    }
-}, []);
+
 
 
   return (
+    <>
+
     <section className='PresentationContainer'>
       <Image 
       src={background}
-      alt={"image d'arriere plan représentant du développement web en ReactJS"}
+      alt={"image d'arriere plan représentant un IDE de développement web en ReactJS"}
       className='backgroundIMG'
+      priority={true}
       />
       <figure className='LogoContainer' id="logo">
       <Image 
          src={monitor}
-         alt={''}
+         alt={'Logo Cheikh Hussein représentant un C et un H'}
          width={260}
          height={250}
+         priority={true}
       />
       <figcaption>
     <h1 className="h1">
@@ -57,7 +50,7 @@ const Presentation: React.FC = () => {
     </figcaption>
     </figure>
     </section>
-
+    </>
   );
 }
 

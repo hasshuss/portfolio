@@ -21,11 +21,3 @@ body{
   margin:0 !important;
 }
 
-#logo {
-  opacity: 0;              /* Opacité initiale: totalement transparent */
-  transition: opacity 2s;  /* Transition sur 2 secondes */
-}
-
-#logo.visible {
-  opacity: 1; /* Opacité finale: totalement opaque */
-}

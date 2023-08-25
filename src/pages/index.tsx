@@ -9,15 +9,17 @@ import Footer from '@/Components/Footer/Footer';
 
 
 
+
 export default function Index() {
   return (
     <>
     <Head>
-    <title>Web Developpeur - Hassan Cheikh Hussein</title>
+    <title>Hassan Cheikh Hussein - Développeur Web</title>
     <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <link rel="canonical" href="https://www.cheikh-hussein.com" />
+    <meta name="description" content="Web Developpeur - Hassan Cheikh-Hussein - Compétences, Portfolio, Services" />
     </Head>
     <Nav />
-
       <main className='name'>
       <Presentation />
       <Skills />

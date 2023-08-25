@@ -15,7 +15,7 @@
   display: flex;
   flex-direction: row;
   position: fixed;
-  z-index: 3;
+  z-index: 10;
   backdrop-filter: saturate(20%) blur(20px);
   transition: background-color 2s;
   background: rgba(251, 251, 253, .8);
@@ -39,7 +39,6 @@
   height: 100%;
   position: relative;
   background-color: #f5f5f7;
-
 }
 
 .active {
@@ -48,7 +47,7 @@
 
 .LogoHeader {
   display: flex;
-  z-index: 4;
+  z-index: 11;
   position: fixed;
   top: 10px;
   left: 30px;

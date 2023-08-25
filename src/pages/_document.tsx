@@ -5,10 +5,13 @@ class MyDocument extends Document {
     const schema = {
         "@context": "https://schema.org",
         "@type": "Person",
-        
         "name": "Hassan Cheikh Hussein",
+        "familyName":"Cheikh Hussein",
+        "givenName":"Hassan",
+        "additionalName": "hassou",
         "url": "https://www.cheikh-hussein.com",
-        
+        "birthPlace": "Colombes",
+
     };
 
     return (

@@ -13,12 +13,13 @@ import backend from '../../images/backend.png'
 import frontend from '../../images/frontend.png'
 import seo from '../../images/seo.png'
 import int from '../../images/int.png'
+import Modal from '../Modal/Modal'
 
 
 export default function Skills() {
   return (
     <section className="SkillSection" id="AncreSkills" >
-      <h2 id='h2SkillsSection' className='h2Skills' >Compétences</h2>
+      <h2 id='h2SkillsSection'  >Compétences</h2>
       <section className="skillsListContainer">
 
         <SkillCard
@@ -33,12 +34,19 @@ export default function Skills() {
                 height={300}
               />
               <CollapseStackTechClosed
-                content={
+                content={ <>
                   <div className='TechContainer'>
                     <SkillNameAndIconeHTML />
                     <SkillNameAndIconeCSS />
                     <SkillNameAndIconeSASS />
                   </div>
+                  <Modal 
+                  content={<div>lol ca puir</div>}
+                  initialIsOpen={false}
+                  contentLink={"mdr"}
+                  
+                  />
+                  </>
                 }
               />
             </>
@@ -46,13 +54,13 @@ export default function Skills() {
         />
 
         <SkillCard
-          title={<>Dévellopement<br></br>Front End</>}
+          title={<>Développement <br></br>FrontEnd</>}
           content={
             <>
               <Image
                 src={frontend}
                 className={"icone"}
-                alt="image d'un écran d'ordinateur affichant du dévellopement web FrontEnd"
+                alt="image d'un écran d'ordinateur affichant du développement web FrontEnd"
                 width={300}
                 height={300}
               />
@@ -71,13 +79,13 @@ export default function Skills() {
         />
 
         <SkillCard
-          title={<>Dévellopement<br></br>Back End</>}
+          title={<>Développement <br></br>BackEnd</>}
           content={
             <>
               <Image
                 src={backend}
                 className={"icone"}
-                alt="image d'un écran d'ordinateur affichant du dévellopement web Backend"
+                alt="image d'un écran d'ordinateur affichant du développement web Backend"
                 width={300}
                 height={300}
               />
@@ -94,7 +102,7 @@ export default function Skills() {
         />
 
         <article className='skillContainer'>
-          <h2 className='h2Skills'>Optimisation<br></br> SEO</h2>
+          <h2 className='h2Skills'>Optimisation <br></br> SEO</h2>
           <Image
             src={seo}
             className={"icone"}
@@ -104,7 +112,7 @@ export default function Skills() {
           />
           <Collapse
             title="Stack Technique"
-            content={"Wave, LightHouse"}
+            content={"Wave, LightHouse, Google Search Console"}
             isOpen={false}
           />
         </article>

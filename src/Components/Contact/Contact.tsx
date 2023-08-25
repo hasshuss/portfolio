@@ -46,20 +46,16 @@ function Contact() {
             </a>
             </div>
             <div className='ContactItem'>
-            <a href=''>
+            <a href='mailto:hasscrpt@gmail.com'>
               <FontAwesomeIcon icon={faEnvelope} size="2xl" className='icone' />
               <span className='ContactText'>hasscrpt@gmail.com</span>
             </a>
           </div>
           <div className='ContactItem'>
-            <a href=''>
             <FontAwesomeIcon icon={faPhoneVolume} size="2xl" className='icone' />
               <span className='ContactText'>+31 6 29 48 10 76</span>
-            </a>
           </div>
         </article>
-
-
         <form className="formulaire" onSubmit={handleSubmit} itemScope itemType="http://schema.org/ContactPoint">
           <div>
             <label className="formulaireSmall" htmlFor="name">Nom</label>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import background from "../../images/logohch.png"
+import background from "../../images/logohch.webp"
 
 
 export default function Nav() {

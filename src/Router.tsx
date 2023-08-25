@@ -1,4 +1,3 @@
-
 import Index from './pages/index'
 
 
@@ -7,4 +6,3 @@ const routes = [
 ];
 
 export default routes;
-
