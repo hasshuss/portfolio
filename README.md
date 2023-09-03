@@ -1,4 +1,4 @@
-Portfolio built with Next.js and TypeScript, inspired by the design of the Apple website.
+Portfolio built with Next.js, TypeScript and Sass
 
 visit https://www.cheikh-hussein.com to see the prod 
 
