@@ -1,27 +1,38 @@
-.ModalContainer{
-    z-index: 20;
-    width: 50%;
-    height: 300px;
-    position: fixed; /* Modifié à fixed */
-    border-width: 1px;
-    border-style: solid;
-    left: 50%;
-    top: 50%;
-    bottom:50%;
-    transform: translateX(-50%); /* Pour centrer horizontalement */
-    background-color: red;
+@import '../../styles/mixins.scss';
+
+
+.ModalContainer {
+  @include AppleStyle;
+  z-index: 20;
+  width: 50%;
+  position: fixed; 
+  border-width: 1px;
+  border-style: solid;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 60px;
 }
 
-.ModalClosed{
-    display:none !important
-}
 
+
+.ModalHidden {
+    display: none;
+  }
+  
   .backdrop {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* couleur de fond noire avec 50% d'opacité */
-    z-index: 10; /* Assurez-vous que ceci est en dessous de la modale */
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+    display: none; /* Par défaut, le backdrop est caché */
+  }
+  
+  .backdrop-visible {
+    display: block; /* Affiche le backdrop lorsque la modale est ouverte */
   }

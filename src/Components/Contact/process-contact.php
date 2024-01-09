@@ -1,11 +1,17 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $headers = "From: $email" . "\r\n" .
+           "Reply-To: $email" . "\r\n" .
+           "MIME-Version: 1.0" . "\r\n" .
+           "Content-Type: text/plain; charset=UTF-8";
+
+           
     $name = $_POST["name"];
     
     // Validation de l'email
     $email = $_POST["email"];
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo "L'email n'est pas dans un format valide.";
         exit;
     }
 

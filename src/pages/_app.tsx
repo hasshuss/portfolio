@@ -13,6 +13,7 @@ import '../Components/TextEvent/TextEvent.scss';
 import '../Components/Presentation/Presentation.scss';
 import "../Components/Footer/Footer.scss"
 import '../Components/Modal/Modal.scss'
+import '../Components/Spitch/Spitch.scss'
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css"; // Import the CSS
 

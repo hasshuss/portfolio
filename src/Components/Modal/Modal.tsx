@@ -6,10 +6,11 @@ import vector from '../../images/Vectorlight.png';
 interface ModalProps {
   content: JSX.Element;
   initialIsOpen: boolean;
-  contentLink: string;   // Marqué comme optionnel car il n'est pas utilisé actuellement.
+  contentLink?: string;
+  fonction?: () => void;
 }
 
-const Modal: React.FC<ModalProps> = ({ content, initialIsOpen, contentLink }) => {
+const Modal: React.FC<ModalProps> = ({ content, initialIsOpen, contentLink, fonction }) => {
   const [isOpen, setIsOpen] = useState<boolean>(initialIsOpen);
   const [modalRoot, setModalRoot] = useState<HTMLElement | null>(null);
 
@@ -25,29 +26,31 @@ const Modal: React.FC<ModalProps> = ({ content, initialIsOpen, contentLink }) =>
 
   const handleToggle = () => {
     setIsOpen((prevState) => !prevState);
+    
   };
 
 
   useEffect(() => {
-    if (isOpen) {
-      document.body.classList.add('modal-open');
-    } else {
-      document.body.classList.remove('modal-open');
-    }
-  }, [isOpen]);
+    const root = document.createElement('div');
+    const parent = document.getElementById('Portfolio')
 
-  const handleOutsideClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (e.target === e.currentTarget) {
-      handleToggle();
+    if (parent) {
+        parent.appendChild(root);
+        setModalRoot(root);
+
+        return () => {
+            parent.removeChild(root);
+        };
     }
-  };
+}, []);
+
 
   if (!modalRoot) return null;
 
   return (
     <>
       <div className='LinkContainer' onClick={handleToggle}>
-        <div className='TextLink Link'>{contentLink}</div>
+        <div className='TextLink Link' onClick={fonction}>{contentLink}</div>
         <Image
           src={vector}
           alt='Vector icon'
@@ -56,11 +59,14 @@ const Modal: React.FC<ModalProps> = ({ content, initialIsOpen, contentLink }) =>
           height={16}
         />
       </div>
-
-      {isOpen && ReactDOM.createPortal(
+  
+      {ReactDOM.createPortal(
         <>
-          <div className="backdrop" onClick={handleToggle}></div>
-          <div className={`ModalContainer`}>
+          <div 
+            className={`backdrop ${isOpen ? 'backdrop-visible' : ''}`} 
+            onClick={handleToggle}
+          ></div>
+          <div aria-hidden="true" className={`ModalContainer ${isOpen ? '' : 'ModalHidden'}`}>
             <div onClick={(e) => e.stopPropagation()} className='CloseIcon'>
               {content}
             </div>

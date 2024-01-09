@@ -4,8 +4,7 @@ import background from "../../images/backgroundpre1.webp"
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import Head from 'next/head';
-import React, { useEffect } from 'react';
+import React from 'react';
 
 const Presentation: React.FC = () => {
   
@@ -38,7 +37,7 @@ const Presentation: React.FC = () => {
     Développeur Web
     </h2>
     <div className='FaIcones'>
-      <a href='https://www.linkedin.com/in/hassan-cheikh-hussein-5907a0227/' target="_blank" rel="noopener noreferrer">
+      <a href='https://www.linkedin.com/in/hassan-c-5907a0227/' target="_blank" rel="noopener noreferrer">
     <FontAwesomeIcon icon={faLinkedin} size="xl" className='icone'/>
     <span className='hide'>Lien Linkedin</span>
     </a>

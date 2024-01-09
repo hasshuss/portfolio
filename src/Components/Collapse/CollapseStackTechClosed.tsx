@@ -10,7 +10,7 @@ const CollapseStackTechClosed: React.FC<CollapseStackTechClosedProps> = ({ conte
     <Collapse
       title="Stack Technique"
       content={content}
-      isOpen={false}
+      isOpen={true}
     />
   );
 };

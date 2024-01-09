@@ -6,23 +6,25 @@
   flex-direction: row;
   justify-content: space-around;
   padding-bottom: 20px;
+  align-items: center;
 }
 
 .ContactList {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
   color: black;
   padding-top: 70px;
   padding-bottom: 70px;
   align-items:flex-start;
+  gap:40px
 }
 
 .ContactItem{
   color:gray;
 }
 
-.ContactText {
+.ContactText{
   margin-left: 5px;
 }
 
@@ -62,14 +64,10 @@ form textarea {
 
 .formulaireSmall {
   width: 300px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .formulaireBig {
   width: 300px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .button {
@@ -91,6 +89,17 @@ form textarea {
   cursor: pointer;
 }
 
+.modal{
+  position:absolute;
+  display:block;
+  z-index: 100;
+  background-color: white;
+  border-width: 2px;
+  border-color: black;
+  border-style: groove;
+}
+
+
 @media (max-width: 700px) {
 
   .ContactContainer {
@@ -105,6 +114,10 @@ form textarea {
     margin-bottom: 20px;
     margin-top:40px;
     align-items: center;
+    flex-direction: column;
   }
 
+  
+
 }
+
